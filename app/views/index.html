@@ -2,17 +2,17 @@
   <h1>Thinkering</h1>
 
   <p>What are you thinkering about?</p>
-  <form class="form-inline" action="#">
+  <form data-scope="form" class="form-inline">
     <div class="form-group">
       <label>
         In brief
-        <input type="text" placeholder="Cats...">
+        <input data-prop="body" type="text" placeholder="Cats...">
       </label>
     </div>
     <div class="form-group">
       <label>
         More info at
-        <input type="url" placeholder="http://google.com">
+        <input data-prop="url" type="url" placeholder="http://google.com">
       </label>
     </div>
     <button type="submit " class="btn btn-default">Thunk it</button>
