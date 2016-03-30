@@ -7,6 +7,8 @@ Pakyow::App.routes do
 
   restful :thunk, "/thunks" do
     create do
+      data(:thunk).create(params[:form])
+      redirect "/"
     end
   end
 end
