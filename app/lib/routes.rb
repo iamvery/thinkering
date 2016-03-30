@@ -1,6 +1,6 @@
 Pakyow::App.routes do
   default do
-    view.scope(:thunk).mutate(:list, with: data(:thunk).all)
+    view.scope(:thunk).mutate(:list, with: data(:thunk).all).subscribe
     view.scope(:form).bind(Thunk.new.to_h)
   end
 
