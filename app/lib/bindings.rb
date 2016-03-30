@@ -1,4 +1,8 @@
 Pakyow::App.bindings do
+  scope :form do
+    restful :thunk
+  end
+
   scope :thunk do
     binding :url do
       {
