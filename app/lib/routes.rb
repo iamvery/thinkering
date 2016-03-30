@@ -5,5 +5,8 @@ Pakyow::App.routes do
     view.scope(:form).bind(Thunk.new.to_h)
   end
 
-  # define application routes here
+  restful :thunk, "/thunks" do
+    create do
+    end
+  end
 end
