@@ -1,6 +1,6 @@
 Pakyow::App.routes do
   default do
-    view.scope(:thunk).apply(data(:thunk).all.data)
+    view.scope(:thunk).mutate(:list, with: data(:thunk).all)
     view.scope(:form).bind(Thunk.new.to_h)
   end
 
