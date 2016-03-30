@@ -8,6 +8,7 @@ gem 'thin', platforms: :mswin
 
 # use dotenv to load environment variables
 gem 'dotenv'
+gem "pry"
 
 group :test do
   gem 'rspec'
