@@ -9,9 +9,10 @@ class Thunk
     new(*args).save
   end
 
-  attr_reader :body, :url
+  attr_reader :id, :body, :url
 
   def initialize(attributes = Hash.new)
+    @id = attributes.fetch("id") { SecureRandom.uuid }
     @body = attributes.fetch("body") { "" }
     @url = attributes.fetch("url") { "" }
   end
@@ -28,4 +29,8 @@ class Thunk
     }
   end
   alias_method :to_hash, :to_h
+
+  def [](attribute)
+    public_send(attribute)
+  end
 end
